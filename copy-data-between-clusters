@@ -1,0 +1,32 @@
+
+
+#TO COPY THE WHOLE CLUSTER AND DEPLOT IT TO ANOTHER IN MONGO ATLAS
+
+This command can also be used to take dump from mongo atlas cluster
+#to create a binary export of the contents of a database
+mongodump --uri mongodb+srv://admin:<PASSWORD>@testing-db-dev.ppwhjddffhhjgfulq.mongodb.net/<DATABASE> 
+
+
+#"to creates a new database or adds data to an existing database. 
+By default, mongorestore reads the database dump in the dump/ sub-directory of the current directory;
+to restore from a different directory, pass in the path to the directory as a final argument."
+
+mongorestore --uri mongodb+srv://admin:<PASSWORD>@testing-db-dev.ppwkdffjhgfhjfulq.mongodb.net 
+
+
+FOR DATA IMPORT AND EXPORT
+
+#to imports content from an Extended JSON, CSV, or TSV export
+mongoimport --uri mongodb+srv://admin:<PASSWORD>@testing-db-dev.ppwfsdfghjhulq.mongodb.net/<DATABASE> --collection <COLLECTION> --type <FILETYPE> --file <FILENAME>
+
+
+#produces a JSON or CSV export of data stored in a MongoDB instance
+mongoexport --uri mongodb+srv://admin:<PASSWORD>@testing-db-dev.ppwfuffgflq.mongodb.net/<DATABASE> --collection <COLLECTION> --type <FILETYPE> --out <FILENAME>
+
+
+Set Up Diagnostics
+#provides a quick overview of the status of a currently running mongod or mongos instance
+mongostat --uri mongodb+srv://admin:<PASSWORD>@testing-db-dev.ppwfgghgulq.mongodb.net 
+
+#tracks the amount of time a MongoDB instance spends reading and writing data
+mongotop --uri mongodb+srv://admin:<PASSWORD>@testing-db-dev.ppwggjkluhhfulq.mongodb.net 
